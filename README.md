@@ -25,21 +25,24 @@ Vous n'avez **rien à installer** sur votre machine : Codespaces fournit un envi
 
 ---
 
-## Étape 2 – Créer un nouveau repository
+## Étape 2 – Forker le repository de l'atelier
 
-1. Une fois connecté, cliquez sur le bouton **+** (en haut à droite), puis sur **New repository**.
-2. Donnez un nom à votre repository, par exemple `Atelier_Docker_Bases`.
-3. Laissez la visibilité sur **Public**.
-4. Cochez la case **Add a README file**.
-5. Cliquez sur **Create repository**.
+Un *fork* est une copie d'un repository dans votre propre compte GitHub. Vous pourrez y travailler librement, sans modifier le repository d'origine.
 
-> Le fichier README est important : un repository vide ne peut pas être ouvert dans Codespaces.
+1. Une fois connecté, rendez-vous sur le repository de l'atelier : [https://github.com/bstocker/Atelier_Docker_Bases](https://github.com/bstocker/Atelier_Docker_Bases).
+2. Cliquez sur le bouton **Fork** (en haut à droite).
+3. Laissez votre compte comme **Owner** et le nom du repository inchangé.
+4. Cliquez sur **Create fork**.
+
+Vous êtes maintenant sur **votre copie** du repository (l'adresse est de la forme `https://github.com/<votre-pseudo>/Atelier_Docker_Bases`).
+
+> ⚠️ Pour la suite de l'atelier, travaillez toujours depuis **votre fork**, et non depuis le repository d'origine.
 
 ---
 
 ## Étape 3 – Lancer un Codespace
 
-1. Sur la page de votre repository, cliquez sur le bouton vert **Code**.
+1. Sur la page de **votre fork**, cliquez sur le bouton vert **Code**.
 2. Sélectionnez l'onglet **Codespaces**.
 3. Cliquez sur **Create codespace on main**.
 
@@ -105,36 +108,5 @@ Vous devez voir la page **« It works! »**.
 Copiez l'URL de votre site web (celle qui affiche **« It works! »**) et collez-la dans le salon **#général** du Discord.
 
 ---
-
-## 📝 Note – Faire un `push` depuis Codespaces
-
-Les modifications que vous faites dans le Codespace restent **dans le Codespace** tant que vous ne les envoyez pas (*push*) vers votre repository GitHub. Pensez à le faire régulièrement pour ne pas perdre votre travail.
-
-Bonne nouvelle : dans un Codespace, **vous êtes déjà authentifié** auprès de GitHub. Aucun mot de passe ni token n'est demandé pour pousser vers votre propre repository.
-
-### Option A – En ligne de commande (terminal)
-
-```bash
-# 1. Voir les fichiers modifiés
-git status
-
-# 2. Ajouter les fichiers à enregistrer
-git add .
-
-# 3. Créer un commit avec un message explicatif
-git commit -m "Mon message de commit"
-
-# 4. Envoyer le commit sur GitHub
-git push
-```
-
-### Option B – Avec l'interface graphique
-
-1. Cliquez sur l'icône **Source Control** dans la barre latérale gauche (icône en forme de branche, raccourci `Ctrl` + `Shift` + `G`).
-2. Saisissez un message dans le champ **Message**.
-3. Cliquez sur **Commit** (si on vous propose d'ajouter automatiquement tous les fichiers, répondez **Yes**).
-4. Cliquez sur **Sync Changes** pour envoyer vos modifications sur GitHub.
-
-Rafraîchissez ensuite la page de votre repository sur GitHub : vos modifications doivent y apparaître.
 
 > ⚠️ Pensez à **arrêter votre Codespace** quand vous avez terminé (bouton vert **Code** → onglet **Codespaces** → **…** → **Stop codespace**) afin de ne pas consommer inutilement votre quota d'heures gratuites.
