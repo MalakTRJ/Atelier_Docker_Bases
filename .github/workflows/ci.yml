@@ -19,7 +19,7 @@ jobs:
 
   Dockerfile:
     runs-on: ubuntu-latest
-    needs: Dรฉpendances
+    needs: Dependances
     steps:
       - name: Recuperer le code
         uses: actions/checkout@v4
@@ -31,4 +31,3 @@ jobs:
           scan-ref: .
           severity: HIGH,CRITICAL
           exit-code: 1
-          
