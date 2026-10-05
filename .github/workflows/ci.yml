@@ -13,7 +13,7 @@ jobs:
       - name: Scan requirements.txt avec Trivy
         run: |
           docker run --rm \
-            -v "$PWD":/project \
+            -v "$PWD/breakableflask":/project \
             aquasec/trivy:latest fs \
             --severity HIGH,CRITICAL \
             --exit-code 1 \
@@ -30,9 +30,8 @@ jobs:
       - name: Scan Dockerfile avec Trivy
         run: |
           docker run --rm \
-            -v "$PWD":/project \
+            -v "$PWD/breakableflask":/project \
             aquasec/trivy:latest config \
             --severity HIGH,CRITICAL \
             --exit-code 1 \
             /project
-            
